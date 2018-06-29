@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Software para poder saber la cantidad de magnetita que se usa como reactivo">
+    <title>Aplicativos CMUA</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.1/awesomplete.css">
+    <meta charset="utf-8">
+  </head>
+  <body style="font-family:Helvetica, Arial, sans-serif;margin: 0;">
+    <header style="text-align:center;">
+      <h1>Aplicativo para generación de magnetita</h1>
+      <p>Ana Lucía Campaña, Sergio Flórez, Juliana Noguera, Johann Osma</p>
+      <p>Universidad de los Andes. Grupo de investigación CMUA.</p>
+    </header>
+    <div style="text-align:center;">
+      <input type="grams" name="elements" id="quantity" class="awesomplete" align="center">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.1/awesomplete.min.js"></script>
+    <script>
+      var elemento = document.getElementById('quantity');
+
+      new Awesomplete(elemento,{
+        list:["Uriel","Luis","Eduardo","Marines","Jose Dimas","Jose Javier"]
+      })
+    </script>
+  </body>
+</html>
