@@ -4,32 +4,93 @@
     <meta charset="utf-8">
     <meta name="description" content="Software para poder saber la cantidad de magnetita que se usa como reactivo">
     <title>Aplicativos CMUA</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.1/awesomplete.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    
     <meta charset="utf-8">
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async>
-    </script>
+  
   </head>
-  <body style="font-family:Helvetica, Arial, sans-serif;margin: 0; background-color: #FFF7E4">
-    <header style="text-align:center;">
-      <h1>Aplicativo para generación de magnetita</h1>
-      <p>Ana Lucía Campaña, Sergio Flórez, Juliana Noguera, Johann Osma</p>
-      <p>Universidad de los Andes. Grupo de investigación CMUA.</p>
+<body>
+    <header class="container-fluid" style="background: #232323;color:#f44336; ">
+      <div class="row">
+        <div class="col-md-12">
+            <h1>Aplicativo para generación de magnetita</h1>
+            <p>Ana Lucía Campaña, Sergio Flórez, Juliana Noguera, Johann Osma</p>
+            <p>Universidad de los Andes. Grupo de investigación CMUA.</p>
+        </div>
+      </div>
     </header>
-    <div style="text-align:center;">
-      <input type="grams" name="elements" id="quantity" class="awesomplete" align="center">
-    </div>
+      <style>
+      .srchFld {
+  border: 0;
+  border-radius:7px;
+  padding: 0 17px;
+  padding-right:55px;
+  display:inline-block;
+  float:left;
+  width:380px;
+  border-bottom:5px solid #bdc3c7;
+  height: 60px;
+  font-family: 'Roboto', sans-serif;
+  color: #7f8c8d;
+  font-size:19px;
+  
+}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.1/awesomplete.min.js"></script>
-    <script>
-      var elemento = document.getElementById('quantity');
+.srchFld:focus {
+  outline-color: rgba(white,0);
+}
 
-      new Awesomplete(elemento,{
-        list:["Uriel","Luis","Eduardo","Marines","Jose Dimas","Jose Javier"]
-      })
-    </script>
+.srchBtn {
+  border: 0;
+  border-radius:7px;
+  padding: 0 17px;
+  background: #e74c3c;
+  display:inline-block;
+  float:right;
+  width:99px;
+  border-bottom:5px solid #c0392b;
+  color:white;
+  height: 60px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size:18px;
+  cursor: pointer;
+}
 
-    <section>
+.srchBtn:active {
+  border-bottom:0px solid #c0392b;
+}
+
+.ico {
+  position: absolute;
+  right:135px;
+  top: 13px;
+  font-size:35px;
+  color:#7f8c8d;
+}
+.cont {
+  position: relative;
+  margin:20px auto;
+  width: 500px;
+}
+</style>
+    <main class="container-fluid" style="background: #8C404C;">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+                <form action="" class="cont">
+                    <input type="text" class="srchFld" placeholder="" ng-model="search"/>
+                    <button type="submit" class="srchBtn">Calcular</button>
+                    <div class="entypo-search ico"></div>
+                  </form>
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+    </main>
+
+
+    <section style="background: #317372;color: #cdcdcd;">
       <div style="margin-left:20px;">
         <div>
           <p>Hola! Este aplicativo te ayuda en la síntesis de magnetita.</p>
@@ -46,5 +107,23 @@
         <p>Primero, ¿Qué cantidad de magnetita deseas [g]?</p>
     </div>
     </section>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async>
+  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.1/awesomplete.min.js"></script>
+    <script>
+
+      var elemento = document.getElementById('quantity');
+
+      new Awesomplete(elemento,{
+        list:["Uriel","Luis","Eduardo","Marines","Jose Dimas","Jose Javier"]
+      })
+    </script>
   </body>
 </html>
