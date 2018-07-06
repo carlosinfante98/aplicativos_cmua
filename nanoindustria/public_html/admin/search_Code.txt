@@ -1,0 +1,17 @@
+// Search code
+mysql_select_db($database_check_nano, $check_nano);
+// Search for value in the search box
+if (isset($_POST['search_text'])) 
+{
+  	$searchword = $_POST['search_text'];
+	$query_RecordNano1 = "SELECT * FROM nano_colombia WHERE name LIKE '%".$searchword."%'";
+}
+// Search for all records, if search box is empty
+else
+{
+	$query_RecordNano1 = "SELECT * FROM nano_colombia";	
+}
+$query_limit_RecordNano1 = sprintf("%s LIMIT %d, %d", $query_RecordNano1, $startRow_RecordNano1, $maxRows_RecordNano1);
+$RecordNano1 = mysql_query($query_limit_RecordNano1, $check_nano) or die(mysql_error());
+$row_RecordNano1 = mysql_fetch_assoc($RecordNano1);
+// End of the search code

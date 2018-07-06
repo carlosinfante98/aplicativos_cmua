@@ -1,0 +1,10 @@
+[06-Jul-2018 22:49:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_pconnect() in /home/jx8fmhpy27t2/public_html/Connections/check_nano.php:9
+Stack trace:
+#0 /home/jx8fmhpy27t2/public_html/search_nano.php(1): require_once()
+#1 {main}
+  thrown in /home/jx8fmhpy27t2/public_html/Connections/check_nano.php on line 9
+[06-Jul-2018 22:55:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/jx8fmhpy27t2/public_html/Connections/check_nano.php:9
+Stack trace:
+#0 /home/jx8fmhpy27t2/public_html/search_nano.php(1): require_once()
+#1 {main}
+  thrown in /home/jx8fmhpy27t2/public_html/Connections/check_nano.php on line 9

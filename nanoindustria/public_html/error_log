@@ -1,0 +1,20 @@
+[06-Jul-2018 22:49:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_pconnect() in /home/jx8fmhpy27t2/public_html/Connections/check_nano.php:9
+Stack trace:
+#0 /home/jx8fmhpy27t2/public_html/search_nano.php(1): require_once()
+#1 {main}
+  thrown in /home/jx8fmhpy27t2/public_html/Connections/check_nano.php on line 9
+[06-Jul-2018 22:55:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/jx8fmhpy27t2/public_html/Connections/check_nano.php:9
+Stack trace:
+#0 /home/jx8fmhpy27t2/public_html/search_nano.php(1): require_once()
+#1 {main}
+  thrown in /home/jx8fmhpy27t2/public_html/Connections/check_nano.php on line 9
+[06-Jul-2018 22:59:13 UTC] PHP Parse error:  syntax error, unexpected 'or' (T_LOGICAL_OR), expecting end of file in /home/jx8fmhpy27t2/public_html/Connections/check_nano.php on line 9
+[06-Jul-2018 22:59:18 UTC] PHP Parse error:  syntax error, unexpected 'or' (T_LOGICAL_OR), expecting end of file in /home/jx8fmhpy27t2/public_html/Connections/check_nano.php on line 9
+[06-Jul-2018 23:00:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_select_db() in /home/jx8fmhpy27t2/public_html/search_nano.php:45
+Stack trace:
+#0 {main}
+  thrown in /home/jx8fmhpy27t2/public_html/search_nano.php on line 45
+[06-Jul-2018 23:00:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_select_db() in /home/jx8fmhpy27t2/public_html/search_nano.php:45
+Stack trace:
+#0 {main}
+  thrown in /home/jx8fmhpy27t2/public_html/search_nano.php on line 45
