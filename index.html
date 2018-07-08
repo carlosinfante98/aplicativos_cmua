@@ -4,126 +4,224 @@
     <meta charset="utf-8">
     <meta name="description" content="Software para poder saber la cantidad de magnetita que se usa como reactivo">
     <title>Aplicativos CMUA</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-    
+    <link rel="stylesheet" href=".normalize.css">
     <meta charset="utf-8">
-  
+
   </head>
-<body>
-    <header class="container-fluid" style="background: #232323;color:#f44336; ">
-      <div class="row">
-        <div class="col-md-12">
+  <body style="font-family:Helvetica, Arial, sans-serif;margin:0px; background:#EBEBEB">
+    <header class="container-fluid" style="background: #4062BB;color:white;">
+        <div class="intro" style="display:inline-block;">
             <h1>Aplicativo para generación de magnetita</h1>
             <p>Ana Lucía Campaña, Sergio Flórez, Juliana Noguera, Johann Osma</p>
             <p>Universidad de los Andes. Grupo de investigación CMUA.</p>
         </div>
-      </div>
+        <div class="logos">
+          <img src="images/logo-cmua.png" width="80">
+          <img src="images/logo-uniandes.png" width="250" style="margin-left:20px;">
+        </div>
     </header>
-      <style>
+    <style>
       .srchFld {
-  border: 0;
-  border-radius:7px;
-  padding: 0 17px;
-  padding-right:55px;
-  display:inline-block;
-  float:left;
-  width:380px;
-  border-bottom:5px solid #bdc3c7;
-  height: 60px;
-  font-family: 'Roboto', sans-serif;
-  color: #7f8c8d;
-  font-size:19px;
-  
-}
+        border: 0;
+        border-radius:7px;
+        padding: 0 17px;
+        padding-right:55px;
+        display:inline-block;
+        float:left;
+        width:380px;
+        border-bottom:5px solid #bdc3c7;
+        height: 60px;
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-size:19px;
+      }
+      .srchFld:focus {
+      outline-color: rgba(white,0);
+      }
+      .srchBtn {
+        border: 0;
+        border-radius:7px;
+        padding: 17px;
+        background: #e74c3c;
+        display:inline-block;
+        float:right;
+        width:99px;
+        border-bottom:5px solid #c0392b;
+        color:white;
+        height: 60px;
+        font-family: 'Roboto', sans-serif;
+        font-size:18px;
+        cursor: pointer;
+      }
+      .srchBtn:active {
+        border-bottom:0px solid #c0392b;
+      }
+      .ico {
+        position: absolute;
+        right:135px;
+        top: 13px;
+        font-size:35px;
+        color:#7f8c8d;
+      }
+      .intro{
+        display: inline-block;
+        padding-right: 25%;
+      }
+      .logos{
+        align-items: right;
+        display:inline-block;
+      }
+      .cont {
+        position: relative;
+        margin:20px auto;
+        width: 500px;
+      }
+      .primary-values{
+        margin: auto;
+        width: 35%;
+        display:inline-block;
+      }
+      .container-fluid{
+        padding:10px;
+      }
+      .datas{
+        text-align: center;
+      }
+      #magnetiteValue{
+        width:58%;
+      }
+      #data1{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        width:7%;
+      }
+      #data2{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        width:7%;
+      }
+      #data3{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        width:7%;
+      }
+      #data4{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        width:7%;
+      }
+      #data5{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        width:7%;
+      }
+      #data6{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        width:7%;
+      }
 
-.srchFld:focus {
-  outline-color: rgba(white,0);
-}
+      input{
+        outline-style: none;
+        line-height: 28px;
+        font-size: 17px;
+      }
 
-.srchBtn {
-  border: 0;
-  border-radius:7px;
-  padding: 0 17px;
-  background: #e74c3c;
-  display:inline-block;
-  float:right;
-  width:99px;
-  border-bottom:5px solid #c0392b;
-  color:white;
-  height: 60px;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  font-size:18px;
-  cursor: pointer;
-}
+      }
+    </style>
 
-.srchBtn:active {
-  border-bottom:0px solid #c0392b;
-}
-
-.ico {
-  position: absolute;
-  right:135px;
-  top: 13px;
-  font-size:35px;
-  color:#7f8c8d;
-}
-.cont {
-  position: relative;
-  margin:20px auto;
-  width: 500px;
-}
-</style>
-    <main class="container-fluid" style="background: #8C404C;">
-        <div class="row">
-            <div class="col-md-12" style="text-align: center;">
-                <form action="" class="cont">
-                    <input type="text" class="srchFld" placeholder="" ng-model="search"/>
-                    <button type="submit" class="srchBtn">Calcular</button>
-                    <div class="entypo-search ico"></div>
-                  </form>
-            </div>
+    <section style="background:#EBEBEB;">
+      <section style="color: black;">
+        <div style="margin-left:20px;">
+          <div>
+            <p>Este aplicativo tiene como fin estimar la cantidad de reactivos necesarios para la síntesis de una cantidad específica de magnetita.</p>
+            <p>Reactivos a usar son:</p>
+            <ul>
+              <li>Cloruro Ferroso Tetrahidratado - \(FeCl_{2}\ \cdot 4H_{2}O \), peso molecular = 198.81 g/mol</li>
+              <li>Cloruro Ferrico Hexahidratado - \(FeCl_{3}\ \cdot 6H_{2}O \), peso molecular = 270.30 g/mol</li>
+              <li>Hidróxido de sodio - \(NaOH\), peso molecular = 39.997 g/mol</li>
+            </ul>
+          </div>
+          <p>Reacción química de la síntesis de la magnetita:</p>
+          <p> \( Fe^{+2}Cl_{2}^{-1} + 2Fe^{+3}Cl_{3}^{-1} + 8Na^{+1}O^{-2}H^{+1} \rightarrow Fe^{+2}Fe_{2}^{+3}O_{4}^{-2} + 8Na^{+1}Cl^{-1} + 4H_{2}^{+1}O^{-2}\)</p>
+          <p>Peso molecular magnetita: 231.533g/mol </p>
         </div>
-        <div class="row">
-
+      </section>
+      <section class="container-fluid">
+        <div class="col-md-12" style="text-align:center;">
+          <p style="color:black; font-size:20px;font-weight:bold;">¿Qué cantidad de magnetita desea [g]?</p>
+          <div class="primary-values">
+            <input type="number" id= "magnetiteValue" class="srchFld"/>
+            <button class="srchBtn" onclick= changeAllValues("magnetiteValue")>Calcular</button><br>
+          </div>
         </div>
-    </main>
+      </section>
 
-
-    <section style="background: #317372;color: #cdcdcd;">
-      <div style="margin-left:20px;">
-        <div>
-          <p>Hola! Este aplicativo te ayuda en la síntesis de magnetita.</p>
-          <p>Se utilizarán los siguientes reactivos:</p>
-          <ul>
-            <li>Cloruro Ferroso Tetrahidratado \(FeCl_{2}\ \cdot 4H_{2}O \)</li>
-            <li>Cloruro Ferrico Hexahidratado \(FeCl_{3}\ \cdot 6H_{2}O \)</li>
-            <li>Hidróxido de sodio \(NaOH\)</li>
-          </ul>
-        </div>
-        <p>La magnetita se genera por la siguiente reacción:</p>
-        <p> \( Fe^{+2}Cl_{2}^{-1} + 2Fe^{+3}Cl_{3}^{-1} + 8Na^{+1}O^{-2}H^{+1} \rightarrow Fe^{+2}Fe_{2}^{+3}O_{4}^{-2} + 8Na^{+1}Cl^{-1} + 4H_{2}^{+1}O^{-2}\)</p>
-        <p>La magnetita tiene un peso molecular: 231.533g/mol </p>
-        <p>Primero, ¿Qué cantidad de magnetita deseas [g]?</p>
-    </div>
+      <section class="datas">
+          <br>Necesitará:<br><br><br>
+            Gramos de \(FeCl_{2} \cdot 3H_{2}O\)<br>
+            <input type="number" id="data1" ><br>
+            <br>
+            Gramos de \(FeCl_{3} \cdot 6H_{2}O\)<br>
+            <input type="number" id="data2" ><br>
+            <br>
+            Gramos de \(NaOH\)<br>
+            <input type="number" id="data3" ><br>
+            <br>
+            Mililitros de \(H_{2}O \ mili \ Q\)<br>
+            <input type="number" id="data4" ><br>
+            <br>
+            Mililitros de \(H_{2}O \ mili \ Q\)<br>
+            <input type="number" id="data5" ><br>
+            <br>
+            Mililitros de \(H_{2}O \ mili \ Q\)<br>
+            <input type="number" id="data6" ><br>
+            <br>
+      </section>
     </section>
-
-
-
-
-
+    <script>
+      function changeAllValues(variable)
+      {
+        changeFirstValue(variable);
+        changeSecondValue(variable);
+        changeThirdValue(variable);
+        changeFourthValue(variable,"4");
+        changeFourthValue(variable,"5");
+        changeFourthValue(variable,"6");
+      }
+      function changeFirstValue(variable)
+      {
+        var magnetite = document.getElementById(variable).value;
+        var finalValue = (magnetite * 198.81)/231.533;
+        finalValue = Math.round(finalValue * 100) / 100;
+        document.getElementById("data1").value = finalValue;
+      }
+      function changeSecondValue(variable)
+      {
+        var magnetite = document.getElementById(variable).value;
+        var finalValue = (magnetite * 270.30 * 2)/231.533;
+        finalValue = Math.round(finalValue * 100) / 100;
+        document.getElementById("data2").value = finalValue;
+      }
+      function changeThirdValue(variable)
+      {
+        var magnetite = document.getElementById(variable).value;
+        var finalValue = (magnetite * 39.997 * 8)/231.533;
+        finalValue = Math.round(finalValue * 100) / 100;
+        document.getElementById("data3").value = finalValue;
+      }
+      //Esta puede ser usada para los ultimos tres valores porque dan igual
+      function changeFourthValue(variable, data)
+      {
+        var magnetite = document.getElementById(variable).value;
+        var finalValue = (magnetite * 1000)/231.533;
+        finalValue = Math.round(finalValue * 100) / 100;
+        document.getElementById("data"+data).value = finalValue;
+      }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async>
-  </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.1/awesomplete.min.js"></script>
-    <script>
-
-      var elemento = document.getElementById('quantity');
-
-      new Awesomplete(elemento,{
-        list:["Uriel","Luis","Eduardo","Marines","Jose Dimas","Jose Javier"]
-      })
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async>
     </script>
   </body>
 </html>
