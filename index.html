@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="description" content="Software para poder saber la cantidad de magnetita que se usa como reactivo">
     <title>Aplicativos CMUA</title>
-    <link rel="stylesheet" href=".normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta charset="utf-8">
 
   </head>
@@ -12,128 +13,20 @@
     <header class="container-fluid" style="background: #981E2F;color:white;">
         <div class="intro" style="display:inline-block;">
             <h1>Aplicativo para generación de magnetita</h1>
-            <p>Ana Lucía Campaña, Sergio Flórez, Juliana Noguera, Johann Osma</p>
-            <p>Universidad de los Andes. Grupo de investigación CMUA.</p>
+            
         </div>
+
         <div class="logos">
           <img src="images/logo-cmua.png" width="115">
           <img src="images/logo-uniandes.png" width="280" style="margin-left:20px;margin-bottom:3%;">
         </div>
+
     </header>
-    <style>
-      .srchFld {
-        border: 0;
-        border-radius:7px;
-        padding: 0 17px;
-        padding-right:55px;
-        display:inline-block;
-        float:left;
-        width:380px;
-        border-bottom:5px solid #bdc3c7;
-        height: 60px;
-        font-family: 'Roboto', sans-serif;
-        color: black;
-        font-size:19px;
-      }
-      .srchFld:focus {
-      outline-color: rgba(white,0);
-      }
-      .srchBtn {
-        border: 0;
-        border-radius:7px;
-        padding: 17px;
-        background: #981E2F;
-        display:inline-block;
-        float:right;
-        width:99px;
-        border-bottom:7px solid #6B1521;
-        color:white;
-        height: 60px;
-        font-family: 'Roboto', sans-serif;
-        font-size:18px;
-        cursor: pointer;
-      }
-      .srchBtn:active {
-        border-bottom:0px solid #c0392b;
-      }
-      .ico {
-        position: absolute;
-        right:135px;
-        top: 13px;
-        font-size:35px;
-        color:#7f8c8d;
-      }
-      .intro{
-        display: inline-block;
-        padding-right: 25%;
-      }
-      .logos{
-        align-items: right;
-        display:inline-block;
-      }
-      .cont {
-        position: relative;
-        margin:20px auto;
-        width: 500px;
-      }
-      .primary-values{
-        margin: auto;
-        width: 35%;
-        display:inline-block;
-      }
-      .container-fluid{
-        padding:10px;
-      }
-      .datas{
-        text-align: center;
-      }
-      #magnetiteValue{
-        width:58%;
-      }
-      #data1{
-        margin-top: 0.5%;
-        margin-bottom: 0.5%;
-        width:7%;
-      }
-      #data2{
-        margin-top: 0.5%;
-        margin-bottom: 0.5%;
-        width:7%;
-      }
-      #data3{
-        margin-top: 0.5%;
-        margin-bottom: 0.5%;
-        width:7%;
-      }
-      #data4{
-        margin-top: 0.5%;
-        margin-bottom: 0.5%;
-        width:7%;
-      }
-      #data5{
-        margin-top: 0.5%;
-        margin-bottom: 0.5%;
-        width:7%;
-      }
-      #data6{
-        margin-top: 0.5%;
-        margin-bottom: 0.5%;
-        width:7%;
-      }
-
-      input{
-        outline-style: none;
-        line-height: 28px;
-        font-size: 17px;
-      }
-
-      button{
-        outline-style: none;
-      }
-
-      }
-    </style>
-
+      <div style="background: #232323; color:#fff;">
+          <p style="margin: 0;">Ana Lucía Campaña, Sergio Flórez, Juliana Noguera, Johann Osma</p>
+            <p>Universidad de los Andes. Grupo de investigación CMUA.</p>
+        </div>
+   
     <section style="background:#EBEBEB;">
       <section style="color: black;">
         <div style="margin-left:20px;">
@@ -153,9 +46,9 @@
       </section>
       <section class="container-fluid">
         <div class="col-md-12" style="text-align:center;">
-          <p style="color:black; font-size:20px;font-weight:bold;">¿Qué cantidad de magnetita (\(Fe_{3}O_{4}\)) desea [g]?</p>
+          <p style="color:black; font-size:30px;font-weight:bold;">¿Qué cantidad de magnetita (\(Fe_{3}O_{4}\)) desea [g]?</p>
           <div class="primary-values">
-            <input type="number" id= "magnetiteValue" class="srchFld"/>
+            <input type="number" id= "magnetiteValue" class="srchFld" min="0" />
             <button class="srchBtn" onclick= changeAllValues("magnetiteValue")>Calcular</button><br>
           </div>
         </div>
@@ -164,39 +57,43 @@
       <section class="datas">
           <br>Necesitará:<br><br><br>
             Gramos de \(FeCl_{2} \cdot 3H_{2}O\)<br>
-            <input type="number" id="data1" >g<br>
+            <input type="number" id="data1" disabled="">g<br>
             \(X_{g}(\frac{1 \ mol \ Fe_{3}O_{4}}{231.533 \ g}) (\frac{1 \ mol \ FeCl_{2}}{1 \ mol \ Fe_{3}O_{4}})
             (\frac{1 \ mol \ FeCl_{2} \cdot 4H_{2}O}{1 \ mol \ FeCl_{2}}) (\frac{198.81 \ g \ FeCl_{2} \cdot 4H_{2}O}{1 \ mol \ FeCl_{2} \cdot 4H_{2}O})\)
             <br><br><br><br>
             Gramos de \(FeCl_{3} \cdot 6H_{2}O\)<br>
-            <input type="number" id="data2" >g<br>
+            <input type="number" id="data2" disabled="">g<br>
             \(X_{g}(\frac{1 \ mol \ Fe_{3}O_{4}}{231.533 \ g}) (\frac{2 \ mol \ FeCl_{3}}{1 \ mol \ Fe_{3}O_{4}})
             (\frac{1 \ mol \ FeCl_{3} \cdot 6H_{2}O}{1 \ mol \ FeCl_{3}}) (\frac{270.30 \ g \ FeCl_{3} \cdot 6H_{2}O}{1 \ mol \ FeCl_{3} \cdot 6H_{2}O})\)
             <br><br><br><br>
             Gramos de \(NaOH\)<br>
-            <input type="number" id="data3" >g<br>
+            <input type="number" id="data3" disabled="">g<br>
             \(X_{g}(\frac{1 \ mol \ Fe_{3}O_{4}}{231.533 \ g}) (\frac{8 \ mol \ NaOH}{1 \ mol \ Fe_{3}O_{4}})
             (\frac{39.997 \ g \ NaOH}{1 \ mol \ NaOH}) \)
             <br><br><br><br>
             <p style="text-align:left; padding-left:14px;">Cada reactivo debe ser disuelto por aparte en \(H_{2}O \ mili \ Q\) con los siguientes volúmenes:</p><br>
             <br>
             Mililitros de \(H_{2}O \ mili \ Q \ (Sol. 1M) \ \rightarrow \ FeCl_{2} \cdot 4H_{2}O\)<br>
-            <input type="number" id="data4" >mL<br>
+            <input type="number" id="data4" disabled="">mL<br>
             \(X_{g}(\frac{1 \ mol \ Fe_{3}O_{4}}{231.533 \ g}) (\frac{1 \ mol \ FeCl_{2}}{1 \ mol \ Fe_{3}O_{4}})
             (\frac{1 \ mol \ FeCl_{2} \cdot 4H_{2}O}{1 \ mol \ FeCl_{2}})\) \( (\frac{1000 \ mL \ H_{2}O }{1 \ mol \ FeCl_{2} \cdot 4H_{2}O}) \)
             <br><br><br><br>
             Mililitros de \(H_{2}O \ mili \ Q \ (Sol. 2M) \ \rightarrow \ FeCl_{3} \cdot 6H_{2}O\)<br>
-            <input type="number" id="data5" >mL<br>
+            <input type="number" id="data5" disabled="">mL<br>
             \(X_{g}(\frac{1 \ mol \ Fe_{3}O_{4}}{231.533 \ g}) (\frac{2 \ mol \ FeCl_{3}}{1 \ mol \ Fe_{3}O_{4}})
             (\frac{1 \ mol \ FeCl_{3} \cdot 6H_{2}O}{1 \ mol \ FeCl_{3}}) (\frac{1000 \ mL \ H_{2}O}{2 \ mol \ FeCl_{3} \cdot 6H_{2}O})\)
             <br><br><br><br>
             Mililitros de \(H_{2}O \ mili \ Q \ (Sol. 8M) \ \rightarrow \ NaOH\)<br>
-            <input type="number" id="data6" >mL<br>
+            <input type="number" id="data6" disabled="">mL<br>
             \(X_{g}(\frac{1 \ mol \ Fe_{3}O_{4}}{231.533 \ g}) (\frac{8 \ mol \ NaOH}{1 \ mol \ Fe_{3}O_{4}})
             (\frac{1000 \ mL \ H_{2}O}{8 \ mol \ NaOH})\)
             <br><br><br><br>
       </section>
     </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async>
+    </script>
     <script>
       function changeAllValues(variable)
       {
@@ -237,9 +134,6 @@
         document.getElementById("data"+data).value = finalValue;
       }
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async>
-    </script>
+
   </body>
 </html>

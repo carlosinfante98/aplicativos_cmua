@@ -1,0 +1,133 @@
+
+      *{
+        outline: none;
+
+      }
+      .srchFld {
+        border: 0;
+        border-radius:7px;
+        padding: 0 17px;
+        padding-right:55px;
+        display:inline-block;
+        float:left;
+        width:380px;
+        border-bottom:5px solid #bdc3c7;
+        height: 60px;
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-size:19px;
+      }
+      .srchFld:focus {
+      outline-color: rgba(white,0);
+      }
+      .srchBtn {
+        border: 0;
+        border-radius:7px;
+        padding: 17px;
+        background: #981E2F;
+        display:inline-block;
+        float:right;
+        width:99px;
+        border-bottom:7px solid #6B1521;
+        color:white;
+        height: 60px;
+        font-family: 'Roboto', sans-serif;
+        font-size:18px;
+        cursor: pointer;
+      }
+      .srchBtn:active {
+        border-bottom:0px solid #c0392b;
+      }
+      .ico {
+        position: absolute;
+        right:135px;
+        top: 13px;
+        font-size:35px;
+        color:#7f8c8d;
+      }
+      .intro{
+        display: inline-block;
+        padding-right: 25%;
+      }
+      .logos{
+        align-items: right;
+        display:inline-block;
+      }
+      .cont {
+        position: relative;
+        margin:20px auto;
+        width: 500px;
+      }
+      .primary-values{
+        margin: auto;
+        width: 35%;
+        display:inline-block;
+      }
+      .container-fluid{
+        padding:10px;
+      }
+      .datas{
+        text-align: center;
+      }
+      #magnetiteValue{
+        width:58%;
+      }
+      #data1{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        width:7%;
+      }
+      #data2{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        width:7%;
+      }
+      #data3{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        width:7%;
+      }
+      #data4{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        width:7%;
+      }
+      #data5{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        width:7%;
+      }
+      #data6{
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        width:7%;
+      }
+
+      input{
+        outline-style: none;
+        line-height: 28px;
+        font-size: 17px;
+      }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+      input:disabled{
+        text-align: right;
+        border: 0;
+        border-radius:7px;
+        
+        
+        background: #bdc3c7;
+        
+        width:360px;
+        border-bottom:5px solid #3D3E40;
+        height: 40px;
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        font-size:19px;
+      }
+      button{
+        outline-style: none;
+      }
